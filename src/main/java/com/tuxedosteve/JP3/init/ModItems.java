@@ -11,5 +11,5 @@ public class ModItems {
 	
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
-	public static final Item LOCK = new ItemBase("Lock");
+	public static final Item LOCK = new ItemBase("lock");
 }

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "III",
+        "ILI",
+        "III"
+    ],
+    "key": 
+    {
+        "I": 
+        {
+            "item": "minecraft:iron_block"
+        },
+        "L": 
+        {
+            "item": "jp:lock"
+        }
+    },
+    "result": 
+    {
+        "item": "jp:safe_block",
+        "count": 1,
+        "data": 0
+    }
+}

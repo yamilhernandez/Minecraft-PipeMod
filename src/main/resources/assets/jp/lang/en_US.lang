@@ -1,0 +1,6 @@
+
+//Items
+item.lock.name=Lock
+
+//Blocks
+tile.safe_block.name=Safe
