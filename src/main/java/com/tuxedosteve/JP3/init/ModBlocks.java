@@ -3,7 +3,6 @@ package com.tuxedosteve.JP3.init;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.tuxedosteve.JP3.blocks.BlockBase;
 import com.tuxedosteve.JP3.blocks.SafeBlock;
 
 import net.minecraft.block.Block;
