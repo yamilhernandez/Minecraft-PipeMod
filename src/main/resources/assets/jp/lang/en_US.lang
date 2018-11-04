@@ -2,4 +2,5 @@
 item.lock.name=Lock	
 item.cash.name=Cash
 
-//tile.safe_block.name=Safe
+//Blocks
+tile.safe_block.name=Safe
