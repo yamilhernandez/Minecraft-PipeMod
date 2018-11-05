@@ -1,8 +1,8 @@
-package com.tuxedosteve.JP3.util.handlers;
+package main.java.com.tuxedosteve.JP3.util.handlers;
 
-import com.tuxedosteve.JP3.init.ModBlocks;
-import com.tuxedosteve.JP3.init.ModItems;
-import com.tuxedosteve.JP3.util.IHasModel;
+import main.java.com.tuxedosteve.JP3.init.ModBlocks;
+import main.java.com.tuxedosteve.JP3.init.ModItems;
+import main.java.com.tuxedosteve.JP3.util.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

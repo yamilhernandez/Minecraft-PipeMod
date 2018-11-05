@@ -1,4 +1,4 @@
-package com.tuxedosteve.JP3.blocks;
+package main.java.com.tuxedosteve.JP3.blocks;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

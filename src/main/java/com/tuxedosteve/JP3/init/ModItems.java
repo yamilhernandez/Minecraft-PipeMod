@@ -1,4 +1,4 @@
- package com.tuxedosteve.JP3.init;
+ package main.java.com.tuxedosteve.JP3.init;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.tuxedosteve.JP3.util;
+package main.java.com.tuxedosteve.JP3.util;
 
 public interface IHasModel {
 	

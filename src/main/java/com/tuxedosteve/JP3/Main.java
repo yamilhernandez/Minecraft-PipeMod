@@ -1,7 +1,7 @@
-package com.tuxedosteve.JP3;
+package main.java.com.tuxedosteve.JP3;
 
-import com.tuxedosteve.JP3.proxy.CommonProxy;
-import com.tuxedosteve.JP3.util.Reference;
+import main.java.com.tuxedosteve.JP3.proxy.CommonProxy;
+import main.java.com.tuxedosteve.JP3.util.Reference;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;

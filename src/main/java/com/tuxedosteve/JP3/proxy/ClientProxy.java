@@ -1,4 +1,4 @@
-package com.tuxedosteve.JP3.proxy;
+package main.java.com.tuxedosteve.JP3.proxy;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

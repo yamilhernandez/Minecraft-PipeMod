@@ -1,4 +1,4 @@
-package com.tuxedosteve.JP3.proxy;
+package main.java.com.tuxedosteve.JP3.proxy;
 
 import net.minecraft.item.Item;
 
