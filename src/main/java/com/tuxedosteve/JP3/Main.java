@@ -1,5 +1,6 @@
 package com.tuxedosteve.JP3;
 
+import com.tuxedosteve.JP3.World.ModWorldGen;
 import com.tuxedosteve.JP3.proxy.CommonProxy;
 import com.tuxedosteve.JP3.util.Reference;
 
@@ -9,7 +10,8 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
@@ -22,6 +24,7 @@ public class Main {
 
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event) {
+		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
 
 	}
 

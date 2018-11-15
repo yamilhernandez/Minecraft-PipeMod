@@ -3,6 +3,7 @@ package com.tuxedosteve.JP3.init;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.tuxedosteve.JP3.blocks.MoneyOre;
 import com.tuxedosteve.JP3.blocks.SafeBlock;
 
 import net.minecraft.block.Block;
@@ -14,5 +15,6 @@ public class ModBlocks {
 
 	// Blocks
 	public static final Block SAFE_BLOCK = new SafeBlock("safe_block", Material.IRON);
+	public static final Block MONEY_ORE = new MoneyOre("money_ore", Material.ROCK);
 
 }

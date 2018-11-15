@@ -1,0 +1,12 @@
+{
+   "parent": "block/cube",
+   "textures": {
+       "particle": "jp:blocks/safe_block_front",
+        "down": "jp:blocks/safe_block_sides",
+        "up": "jp:blocks/safe_block_sides",
+        "north": "jp:blocks/safe_block_front",
+        "east": "jp:blocks/safe_block_sides",
+        "south": "jp:blocks/safe_block_sides",
+        "west": "jp:blocks/safe_block_sides"
+   }
+}
