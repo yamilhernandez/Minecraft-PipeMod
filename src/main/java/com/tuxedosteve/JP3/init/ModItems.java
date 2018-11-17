@@ -30,6 +30,7 @@ public class ModItems {
 	//Items
 	public static final Item LOCK = new ItemBase("lock");
 	public static final Item CASH = new ItemBase("cash");
+	public static final Item BITCOIN = new ItemBase("bitcoin");
 	
 	//Tools
 	public static final ItemSword MONEY_SWORD = new ToolSword("money_sword", MATERIAL_MONEY);

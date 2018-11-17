@@ -1,6 +1,7 @@
 //Items
 item.lock.name=Lock	
 item.cash.name=Cash
+item.bitcoin.name=Bitcoin
 
 //Blocks
 tile.safe_block.name=Safe
