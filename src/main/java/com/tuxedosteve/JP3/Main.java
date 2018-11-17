@@ -1,6 +1,7 @@
 package com.tuxedosteve.JP3;
 
 import com.tuxedosteve.JP3.World.ModWorldGen;
+import com.tuxedosteve.JP3.init.ModRecipes;
 import com.tuxedosteve.JP3.proxy.CommonProxy;
 import com.tuxedosteve.JP3.util.Reference;
 
@@ -30,6 +31,7 @@ public class Main {
 
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
+		ModRecipes.init();
 
 	}
 
