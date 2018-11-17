@@ -5,3 +5,10 @@ item.cash.name=Cash
 //Blocks
 tile.safe_block.name=Safe
 tile.money_ore.name=Money Ore
+
+//Tools
+item.money_sword.name=Money Sword
+item.money_axe.name=Money Axe	
+item.money_pickaxe.name=Money Pickaxe
+item.money_hoe.name=Money Hoe
+item.money_shovel.name=Money Shovel			

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "LL ",
+        " I ",
+        " I "
+    ],
+    "key": 
+    {
+        "I": 
+        {
+            "item": "minecraft:stick"
+        },
+        "L": 
+        {
+            "item": "jp:cash"
+        }
+    },
+    "result": 
+    {
+        "item": "jp:money_hoe",
+        "count": 1,
+        "data": 0
+    }
+}
