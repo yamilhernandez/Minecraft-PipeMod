@@ -4,6 +4,7 @@ import com.tuxedosteve.JP3.World.ModWorldGen;
 import com.tuxedosteve.JP3.init.ModRecipes;
 import com.tuxedosteve.JP3.proxy.CommonProxy;
 import com.tuxedosteve.JP3.util.Reference;
+import com.tuxedosteve.JP3.util.handlers.RegistryHandler;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -32,6 +33,7 @@ public class Main {
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
 		ModRecipes.init();
+		RegistryHandler.initRegistries();
 
 	}
 

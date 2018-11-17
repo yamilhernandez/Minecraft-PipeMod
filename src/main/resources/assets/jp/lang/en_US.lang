@@ -7,6 +7,7 @@ item.bitcoin.name=Bitcoin
 tile.safe_block.name=Safe
 tile.money_ore.name=Money Ore
 tile.bitcoin_ore.name=Bitcoin Ore
+tile.bank_block.name= Bank
 
 //Tools
 item.money_sword.name=Money Sword

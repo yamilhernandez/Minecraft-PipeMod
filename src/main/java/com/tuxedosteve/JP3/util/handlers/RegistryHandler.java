@@ -1,5 +1,6 @@
 package com.tuxedosteve.JP3.util.handlers;
 
+import com.tuxedosteve.JP3.Main;
 import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.init.ModItems;
 import com.tuxedosteve.JP3.util.IHasModel;
@@ -10,6 +11,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 @EventBusSubscriber
 public class RegistryHandler {
@@ -24,6 +26,7 @@ public class RegistryHandler {
 	public static void OnBlockRegister(RegistryEvent.Register<Block> event) {
 
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
+		TileEntityHandler.registerTileEntities();
 	}
 
 	@SubscribeEvent
@@ -46,5 +49,10 @@ public class RegistryHandler {
 			}
 		}
 
+	}
+	
+	public static void initRegistries() {
+		
+		NetworkRegistry.INSTANCE.registerGuiHandler(Main.Instance, new GuiHandler());
 	}
 }
