@@ -8,7 +8,8 @@ public class ModRecipes {
 	
 	public static void init() {
 		
-		GameRegistry.addSmelting(ModItems.CASH, new ItemStack(ModBlocks.MONEY_ORE,1), 3.0F);
+		GameRegistry.addSmelting(ModBlocks.MONEY_ORE, new ItemStack(ModItems.CASH,1), 3.0F);
+		GameRegistry.addSmelting(ModBlocks.BITCOIN_ORE, new ItemStack(ModItems.BITCOIN), 5.0F);
 		
 	}
 

@@ -1,0 +1,12 @@
+{
+   "parent": "block/cube",
+   "textures": {
+       "particle": "jp:blocks/bitcoin_ore",
+        "down": "jp:blocks/bitcoin_ore",
+        "up": "jp:blocks/bitcoin_ore",
+        "north": "jp:blocks/bitcoin_ore",
+        "east": "jp:blocks/bitcoin_ore",
+        "south": "jp:blocks/bitcoin_ore",
+        "west": "jp:blocks/bitcoin_ore"
+   }
+}
