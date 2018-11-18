@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "I I",
+        "I I"
+    ],
+    "key": 
+    {
+        "I": 
+        {
+            "item": "jp:cash"
+        }
+    },
+    "result": 
+    {
+        "item": "jp:money_boots",
+        "count": 1,
+        "data": 0
+     }
+} 

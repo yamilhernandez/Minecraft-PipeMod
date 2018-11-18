@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "I I",
+        "III",
+        "III"
+    ],
+    "key": 
+    {
+        "I": 
+        {
+            "item": "jp:cash"
+        }
+    },
+    "result": 
+    {
+        "item": "jp:money_chestplate",
+        "count": 1,
+        "data": 0
+     }
+}

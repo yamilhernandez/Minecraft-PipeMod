@@ -14,4 +14,10 @@ item.money_sword.name=Money Sword
 item.money_axe.name=Money Axe	
 item.money_pickaxe.name=Money Pickaxe
 item.money_hoe.name=Money Hoe
-item.money_shovel.name=Money Shovel			
+item.money_shovel.name=Money Shovel	
+
+//Armor		
+item.money_helmet.name=Money Helmet
+item.money_chestplate.name=Money ChestPlate	
+item.money_leggings.name=Money Leggings
+item.money_boots.name=Money Boots
