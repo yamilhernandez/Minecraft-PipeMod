@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "BMT",
+        "TMT",
+        "TMB"
+    ],
+    "key": 
+    {
+        "T": 
+        {
+            "item": "minecraft:paper"
+        },
+        "M": 
+        {
+            "item": "jp:cash"
+        },
+        "B": 
+        {
+            "item": "minecraft:leather"
+        }
+    },
+    "result": 
+    {
+        "item": "jp:financial_handbook",
+        "count": 1,
+        "data": 0
+    }
+}

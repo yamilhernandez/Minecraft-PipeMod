@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+ 
+    "ingredients": 
+    [
+ 
+    {
+      "item": "jp:safe_block"
+    }
+    
+    ],
+ 
+    "result": 
+    {
+        "item": "jp:cash",
+        "count": 9
+    }
+}
