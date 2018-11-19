@@ -1,5 +1,7 @@
 package com.tuxedosteve.JP3.blocks.gui;
 
+import java.awt.Color;
+
 import com.tuxedosteve.JP3.blocks.container.ContainerBankBlock;
 import com.tuxedosteve.JP3.blocks.tileentity.TileEntityBankBlock;
 import com.tuxedosteve.JP3.util.Reference;
@@ -29,8 +31,8 @@ public class GuiBankBlock extends GuiContainer {
 	
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-		this.fontRenderer.drawString(this.te.getDisplayName().getUnformattedComponentText(), 8, 6, 16086784);
-		this.fontRenderer.drawString(this.playerInventory.getDisplayName().getUnformattedComponentText(), 6, this.ySize-92, 16086784);
+		this.fontRenderer.drawString("Bank", 8, 6, 000000);
+		this.fontRenderer.drawString(this.playerInventory.getDisplayName().getUnformattedComponentText(), 6, this.ySize-92, 000000);
 		
 	}
 	
