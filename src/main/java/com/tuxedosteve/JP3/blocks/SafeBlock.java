@@ -16,5 +16,7 @@ public class SafeBlock extends BlockBase {
 		// SetBlockUnbreakable();
 
 	}
+	
+	
 
 }
