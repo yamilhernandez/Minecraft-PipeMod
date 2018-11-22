@@ -1,6 +1,8 @@
 package com.tuxedosteve.JP3.util.handlers;
 
 import com.tuxedosteve.JP3.Main;
+import com.tuxedosteve.JP3.blocks.animation.RenderBank;
+import com.tuxedosteve.JP3.blocks.tileentity.TileEntityBankBlock;
 import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.init.ModItems;
 import com.tuxedosteve.JP3.util.IHasModel;
@@ -9,6 +11,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -27,10 +30,12 @@ public class RegistryHandler {
 
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 		TileEntityHandler.registerTileEntities();
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBankBlock.class, new RenderBank());
 	}
 
 	@SubscribeEvent
 	public static void OnModelRegister(ModelRegistryEvent event) {
+		Main.proxy.registerItemRenderer(Item.getItemFromBlock(ModBlocks.BANK_BLOCK), 0, "bank_block");
 
 		for (Item item : ModItems.ITEMS) {
 

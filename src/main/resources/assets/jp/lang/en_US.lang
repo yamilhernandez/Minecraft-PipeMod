@@ -22,3 +22,6 @@ item.money_helmet.name=Money Helmet
 item.money_chestplate.name=Money ChestPlate	
 item.money_leggings.name=Money Leggings
 item.money_boots.name=Money Boots
+
+//Container
+container.bank_block= Bank
