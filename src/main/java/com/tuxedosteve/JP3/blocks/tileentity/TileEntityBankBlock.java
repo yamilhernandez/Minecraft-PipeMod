@@ -185,7 +185,7 @@ public class TileEntityBankBlock extends TileEntityLockableLoot implements ITick
 	
 	public void nearMe() {
 		BlockPos mainPos = this.getPos();
-		for (EnumFacing direction : EnumFacing.VALUES){ // For each direction
+		for (EnumFacing direction : EnumFacing.VALUES){ 
 
 			BlockPos neighbourPos = mainPos.offset(direction); // Offset the block's position by 1 block in the current direction
 
