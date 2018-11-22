@@ -16,14 +16,14 @@ public class ContainerBankBlock extends Container {
 	public ContainerBankBlock(InventoryPlayer playerInv, TileEntityBankBlock chestInventory, EntityPlayer player) {
 		
 		this.chestInventory= chestInventory;
-		this.numRows= chestInventory.getSizeInventory()/9;
+		this.numRows= chestInventory.getSizeInventory();
 		chestInventory.openInventory(player);
 		
 		for (int i=0; i<this.numRows; i++) {
 			
-			for(int j=0; j<9;j++) {
+			for(int j=0; j<1;j++) {
 				
-				this.addSlotToContainer(new Slot(chestInventory, j+i*9, 8+j*18,18+i*18));
+				this.addSlotToContainer(new Slot(chestInventory, j+i*9, 80,145));
 			}
 		}
 		

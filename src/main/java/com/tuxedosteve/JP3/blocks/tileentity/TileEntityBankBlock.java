@@ -18,7 +18,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 
 public class TileEntityBankBlock extends TileEntityLockableLoot implements ITickable {
 	
-	private NonNullList<ItemStack> chestContents= NonNullList.<ItemStack>withSize(72,ItemStack.EMPTY);
+	private NonNullList<ItemStack> chestContents= NonNullList.<ItemStack>withSize(1,ItemStack.EMPTY);
 	public int numPlayersUsing, ticksSinceSync;
 	public float lidAngle, prevLidAngle;
 	
@@ -26,7 +26,7 @@ public class TileEntityBankBlock extends TileEntityLockableLoot implements ITick
 
 	@Override
 	public int getSizeInventory() {
-		return 72;
+		return 1;
 	}
 
 	@Override

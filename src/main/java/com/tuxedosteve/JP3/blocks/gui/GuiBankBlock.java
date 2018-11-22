@@ -31,7 +31,7 @@ public class GuiBankBlock extends GuiContainer {
 	
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-		this.fontRenderer.drawString("Bank", 8, 6, 000000);
+		this.fontRenderer.drawString("Bank", 8, 110, 000000);
 		this.fontRenderer.drawString(this.playerInventory.getDisplayName().getUnformattedComponentText(), 6, this.ySize-92, 000000);
 		
 	}
