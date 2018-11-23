@@ -71,13 +71,17 @@ public class PipeBlock extends BlockContainer {
 	
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		// TODO Auto-generated method stub
 		return new TileEntityPipeBlock();
 	}
 	
 	@Override
+	public boolean hasTileEntity() {
+		return true;
+	}
+	
+	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state) {
-		return EnumBlockRenderType.ENTITYBLOCK_ANIMATED;
+		return EnumBlockRenderType.MODEL;
 	}
 	
 	@Override

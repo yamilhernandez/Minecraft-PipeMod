@@ -9,7 +9,7 @@ public class JP3Tab extends CreativeTabs {
 	
 	public JP3Tab(String label) {
 		
-		super("javaprojecttab ");
+		super("javaprojecttab");
 		this.setBackgroundImageName("javaprojecttab.png");
 	}
 

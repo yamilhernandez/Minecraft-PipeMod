@@ -16,7 +16,7 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot {
 	private NonNullList<ItemStack> chestContents= NonNullList.<ItemStack>withSize(1,ItemStack.EMPTY);
 	private boolean push, pull, transport=true;
 	public int numPlayersUsing, ticksSinceSync;
-	public float lidAngle, prevLidAngle;
+	//public float lidAngle, prevLidAngle;
 
 	
 

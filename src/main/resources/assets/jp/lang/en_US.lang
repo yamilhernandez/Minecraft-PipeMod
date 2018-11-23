@@ -19,7 +19,7 @@ item.money_hoe.name=Money Hoe
 item.money_shovel.name=Money Shovel	
 
 //Tabs
-itemGroup.javaprojecttab= Java Project
+itemGroup.javaprojecttab=Java Project
 
 //Armor		
 item.money_helmet.name=Money Helmet
