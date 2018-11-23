@@ -2,9 +2,11 @@ package com.tuxedosteve.JP3.blocks.tileentity;
 
 import com.tuxedosteve.JP3.blocks.BankBlock;
 import com.tuxedosteve.JP3.blocks.container.ContainerBankBlock;
+import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.util.Reference;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,6 +18,8 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.tileentity.TileEntityLockableLoot;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
@@ -96,6 +100,7 @@ public class TileEntityBankBlock extends TileEntityLockableLoot implements ITick
 	public void update()
 	{
 		this.nearMe();
+		
 		if (!this.world.isRemote && this.numPlayersUsing != 0 && (this.ticksSinceSync + pos.getX() + pos.getY() + pos.getZ()) % 200 == 0)
 		{
 			this.numPlayersUsing = 0;
@@ -183,24 +188,25 @@ public class TileEntityBankBlock extends TileEntityLockableLoot implements ITick
 	}
 
 	
-	public void nearMe() {
-		BlockPos mainPos = this.getPos();
-		for (EnumFacing direction : EnumFacing.VALUES){ 
-
-			BlockPos neighbourPos = mainPos.offset(direction); // Offset the block's position by 1 block in the current direction
-
-			IBlockState neighbourState = world.getBlockState(neighbourPos); // Get the IBlockState at the neighboring position
-
-			Block neighbourBlock = neighbourState.getBlock(); // Get the IBlockState's Block
-
-			if (neighbourBlock == Blocks.IRON_BLOCK){ // If the neighbouring block is a Coal Block
-
-				this.chestContents.set(0, new ItemStack(Items.APPLE));
-			
-			}
-			
-		}
+//	public void nearMe() {
+//		BlockPos mainPos = this.getPos();
+//		for (EnumFacing direction : EnumFacing.VALUES){ 
+//
+//			BlockPos neighbourPos = mainPos.offset(direction); 
+//
+//			IBlockState neighbourState = world.getBlockState(neighbourPos); 
+//
+//			Block neighbourBlock = neighbourState.getBlock(); 
+//
+//			if (neighbourBlock == Blocks.CHEST){ 
+//				TileEntity te = world.getTileEntity(neighbourPos);
+//			    TileEntityChest chest = (TileEntityChest)te ;
+//				this.setInventorySlotContents(0, chest.getStackInSlot(0));
+//			}
+//			
+//		}
 	}
+	
 	
 
 }

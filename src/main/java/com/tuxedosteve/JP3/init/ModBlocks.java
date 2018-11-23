@@ -6,6 +6,7 @@ import java.util.List;
 import com.tuxedosteve.JP3.blocks.BankBlock;
 import com.tuxedosteve.JP3.blocks.BitcoinOre;
 import com.tuxedosteve.JP3.blocks.MoneyOre;
+import com.tuxedosteve.JP3.blocks.PipeBlock;
 import com.tuxedosteve.JP3.blocks.SafeBlock;
 
 import net.minecraft.block.Block;
@@ -20,5 +21,5 @@ public class ModBlocks {
 	public static final Block MONEY_ORE = new MoneyOre("money_ore", Material.ROCK);
 	public static final Block BITCOIN_ORE = new BitcoinOre("bitcoin_ore", Material.ROCK);
 	public static final Block BANK_BLOCK = new BankBlock("bank_block");
-
+	public static final Block PIPE_BLOCK = new PipeBlock("pipe_block");
 }
