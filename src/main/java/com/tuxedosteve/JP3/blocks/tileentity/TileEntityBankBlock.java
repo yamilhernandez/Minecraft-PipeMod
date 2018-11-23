@@ -99,7 +99,7 @@ public class TileEntityBankBlock extends TileEntityLockableLoot implements ITick
 	@Override
 	public void update()
 	{
-		this.nearMe();
+		//this.nearMe();
 		
 		if (!this.world.isRemote && this.numPlayersUsing != 0 && (this.ticksSinceSync + pos.getX() + pos.getY() + pos.getZ()) % 200 == 0)
 		{
@@ -205,7 +205,7 @@ public class TileEntityBankBlock extends TileEntityLockableLoot implements ITick
 //			}
 //			
 //		}
-	}
+//	}
 	
 	
 

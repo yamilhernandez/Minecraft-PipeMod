@@ -3,9 +3,11 @@ package com.tuxedosteve.JP3;
 import com.tuxedosteve.JP3.World.ModWorldGen;
 import com.tuxedosteve.JP3.init.ModRecipes;
 import com.tuxedosteve.JP3.proxy.CommonProxy;
+import com.tuxedosteve.JP3.tabs.JP3Tab;
 import com.tuxedosteve.JP3.util.Reference;
 import com.tuxedosteve.JP3.util.handlers.RegistryHandler;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -17,6 +19,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
+	
+	public static final CreativeTabs javaprojecttab = new JP3Tab("javaprojecttab");
 
 	@Instance
 	public static Main Instance;

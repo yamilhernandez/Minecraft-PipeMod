@@ -1,5 +1,6 @@
 package com.tuxedosteve.JP3.blocks;
 
+import com.tuxedosteve.JP3.Main;
 import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.init.ModItems;
 import com.tuxedosteve.JP3.util.IHasModel;
@@ -17,7 +18,7 @@ public class BlockBase extends Block implements IHasModel {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		setCreativeTab(Main.javaprojecttab);
 
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
