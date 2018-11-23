@@ -35,7 +35,7 @@ public class TileEntityBankBlock extends TileEntityLockableLoot implements ITick
 	public int numPlayersUsing, ticksSinceSync;
 	public float lidAngle, prevLidAngle;
 
-	
+
 
 	@Override
 	public int getSizeInventory() {
@@ -100,7 +100,7 @@ public class TileEntityBankBlock extends TileEntityLockableLoot implements ITick
 	public void update()
 	{
 		//this.nearMe();
-		
+
 		if (!this.world.isRemote && this.numPlayersUsing != 0 && (this.ticksSinceSync + pos.getX() + pos.getY() + pos.getZ()) % 200 == 0)
 		{
 			this.numPlayersUsing = 0;
@@ -187,26 +187,26 @@ public class TileEntityBankBlock extends TileEntityLockableLoot implements ITick
 		this.world.notifyNeighborsOfStateChange(pos, this.blockType, false);
 	}
 
-	
-//	public void nearMe() {
-//		BlockPos mainPos = this.getPos();
-//		for (EnumFacing direction : EnumFacing.VALUES){ 
-//
-//			BlockPos neighbourPos = mainPos.offset(direction); 
-//
-//			IBlockState neighbourState = world.getBlockState(neighbourPos); 
-//
-//			Block neighbourBlock = neighbourState.getBlock(); 
-//
-//			if (neighbourBlock == Blocks.CHEST){ 
-//				TileEntity te = world.getTileEntity(neighbourPos);
-//			    TileEntityChest chest = (TileEntityChest)te ;
-//				this.setInventorySlotContents(0, chest.getStackInSlot(0));
+
+//		public void nearMe() {
+//			BlockPos mainPos = this.getPos();
+//			for (EnumFacing direction : EnumFacing.VALUES){ 
+//	
+//				BlockPos neighbourPos = mainPos.offset(direction); 
+//	
+//				IBlockState neighbourState = world.getBlockState(neighbourPos); 
+//	
+//				Block neighbourBlock = neighbourState.getBlock(); 
+//	
+//				if (neighbourBlock == Blocks.CHEST){ 
+//					TileEntity te = world.getTileEntity(neighbourPos);
+//				    TileEntityChest chest = (TileEntityChest)te ;
+//					this.setInventorySlotContents(0, chest.getStackInSlot(0));
+//				}
+//				
 //			}
-//			
 //		}
-//	}
-	
-	
+
+
 
 }
