@@ -153,7 +153,7 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 
 			TileEntity te = world.getTileEntity(neighbourPos);
 			TileEntityLockableLoot chest = (TileEntityLockableLoot)te;
-			TileEntityPipeBlock pb= (TileEntityPipeBlock)te;
+			//TileEntityPipeBlock pb= (TileEntityPipeBlock)te;
 			
 			// Del Chest al Pipe(pull)
 			if (neighbourBlock == ModBlocks.BANK_BLOCK && this.isPull() && !chest.isEmpty()){ 
@@ -181,10 +181,10 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 			}
 			
 			//Del pipe(transport) a pipe(cualquiera)
-			else if(neighbourBlock == ModBlocks.PIPE_BLOCK && this.isTransport() && !this.isEmpty()){
-				chest.setInventorySlotContents(0, this.getStackInSlot(0));
-				this.removeStackFromSlot(0);
-			}
+//			else if(neighbourBlock == ModBlocks.PIPE_BLOCK && this.isTransport() && !this.isEmpty()){
+//				chest.setInventorySlotContents(0, this.getStackInSlot(0));
+//				this.removeStackFromSlot(0);
+//			}
 		}
 	}
 
