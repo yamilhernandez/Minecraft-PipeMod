@@ -84,11 +84,7 @@ public class PipeBlock extends BlockContainer {
 		return EnumBlockRenderType.MODEL;
 	}
 	
-	@Override
-	public boolean isFullBlock(IBlockState state) {
-		
-		return false;
-	}
+
 	@Override
 	public boolean isFullCube(IBlockState state) {
 		

@@ -153,20 +153,35 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 
 			TileEntity te = world.getTileEntity(neighbourPos);
 			TileEntityLockableLoot chest = (TileEntityLockableLoot)te;
-
+			TileEntityPipeBlock pb= (TileEntityPipeBlock)te;
+			
+			// Del Chest al Pipe(pull)
 			if (neighbourBlock == ModBlocks.BANK_BLOCK && this.isPull() && !chest.isEmpty()){ 
 				this.setInventorySlotContents(0, chest.getStackInSlot(0));
 				chest.removeStackFromSlot(0);
-			}
+			}	
+			//Del Pipe(push) al chest	
+			
 			else if(neighbourBlock == ModBlocks.BANK_BLOCK && this.isPush() && !this.isEmpty()) {
 				chest.setInventorySlotContents(0, this.getStackInSlot(0));
 				this.removeStackFromSlot(0);
-			}
-			else if(neighbourBlock == ModBlocks.PIPE_BLOCK && this.isPush() && !chest.isEmpty()) {
-				this.setInventorySlotContents(0, chest.getStackInSlot(0));
-				chest.removeStackFromSlot(0);
-			}
+			}	
+			// Del pipe(push) a transport(pipe)
+			
+//			else if(neighbourBlock == ModBlocks.PIPE_BLOCK && this.isPush() && !chest.isEmpty()) {
+//				this.setInventorySlotContents(0, chest.getStackInSlot(0));
+//				chest.removeStackFromSlot(0);
+//			}
+			
+			//Del pipe (pull) a pipe(transport)	
+			
 			else if(neighbourBlock == ModBlocks.PIPE_BLOCK && this.isPull() && !this.isEmpty()) {
+				chest.setInventorySlotContents(0, this.getStackInSlot(0));
+				this.removeStackFromSlot(0);
+			}
+			
+			//Del pipe(transport) a pipe(cualquiera)
+			else if(neighbourBlock == ModBlocks.PIPE_BLOCK && this.isTransport() && !this.isEmpty()){
 				chest.setInventorySlotContents(0, this.getStackInSlot(0));
 				this.removeStackFromSlot(0);
 			}
