@@ -1,7 +1,7 @@
 package com.tuxedosteve.JP3.blocks;
 
 import com.tuxedosteve.JP3.Main;
-import com.tuxedosteve.JP3.blocks.tileentity.TileEntityBankBlock;
+import com.tuxedosteve.JP3.blocks.tileentity.TileEntityTinyChestBlock;
 import com.tuxedosteve.JP3.blocks.tileentity.TileEntityPipeBlock;
 import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.init.ModItems;

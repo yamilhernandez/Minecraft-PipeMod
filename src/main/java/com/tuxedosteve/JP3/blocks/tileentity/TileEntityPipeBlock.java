@@ -1,6 +1,6 @@
 package com.tuxedosteve.JP3.blocks.tileentity;
 
-import com.tuxedosteve.JP3.blocks.container.ContainerBankBlock;
+import com.tuxedosteve.JP3.blocks.container.ContainerTinyChestBlock;
 import com.tuxedosteve.JP3.blocks.container.ContainerPipeBlock;
 import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.util.Reference;
@@ -156,13 +156,13 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 			//TileEntityPipeBlock pb= (TileEntityPipeBlock)te;
 			
 			// Del Chest al Pipe(pull)
-			if (neighbourBlock == ModBlocks.BANK_BLOCK && this.isPull() && !chest.isEmpty()){ 
+			if (neighbourBlock == ModBlocks.TINYCHEST_BLOCK && this.isPull() && !chest.isEmpty()){ 
 				this.setInventorySlotContents(0, chest.getStackInSlot(0));
 				chest.removeStackFromSlot(0);
 			}	
 			//Del Pipe(push) al chest	
 			
-			else if(neighbourBlock == ModBlocks.BANK_BLOCK && this.isPush() && !this.isEmpty()) {
+			else if(neighbourBlock == ModBlocks.TINYCHEST_BLOCK && this.isPush() && !this.isEmpty()) {
 				chest.setInventorySlotContents(0, this.getStackInSlot(0));
 				this.removeStackFromSlot(0);
 			}	

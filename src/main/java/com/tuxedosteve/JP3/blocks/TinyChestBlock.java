@@ -1,7 +1,7 @@
 package com.tuxedosteve.JP3.blocks;
 
 import com.tuxedosteve.JP3.Main;
-import com.tuxedosteve.JP3.blocks.tileentity.TileEntityBankBlock;
+import com.tuxedosteve.JP3.blocks.tileentity.TileEntityTinyChestBlock;
 import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.init.ModItems;
 import com.tuxedosteve.JP3.util.Reference;
@@ -25,9 +25,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.world.BlockEvent;
 
-public class BankBlock extends BlockContainer {
+public class TinyChestBlock extends BlockContainer {
 	
-	public BankBlock(String name) {
+	public TinyChestBlock(String name) {
 		
 		super(Material.IRON);
 		setUnlocalizedName(name);
@@ -43,7 +43,7 @@ public class BankBlock extends BlockContainer {
 			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		
 		if(!worldIn.isRemote) 
-			playerIn.openGui(Main.Instance, Reference.GUI_BANK_BLOCK, worldIn, pos.getX(), pos.getY(), pos.getZ());
+			playerIn.openGui(Main.Instance, Reference.GUI_TINYCHEST_BLOCK, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		
 		return true;
 	}
@@ -51,7 +51,7 @@ public class BankBlock extends BlockContainer {
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
 		
-		TileEntityBankBlock tileentity= (TileEntityBankBlock)worldIn.getTileEntity(pos);
+		TileEntityTinyChestBlock tileentity= (TileEntityTinyChestBlock)worldIn.getTileEntity(pos);
 		InventoryHelper.dropInventoryItems(worldIn, pos, tileentity);
 		super.breakBlock(worldIn, pos, state);	
 	}
@@ -62,8 +62,8 @@ public class BankBlock extends BlockContainer {
 		if(stack.hasDisplayName()) {
 			
 			TileEntity tileentity = worldIn.getTileEntity(pos);
-			if(tileentity instanceof TileEntityBankBlock) {
-			  ((TileEntityBankBlock) tileentity).setCustomName(stack.getDisplayName());
+			if(tileentity instanceof TileEntityTinyChestBlock) {
+			  ((TileEntityTinyChestBlock) tileentity).setCustomName(stack.getDisplayName());
 				
 			}
 			
@@ -73,12 +73,12 @@ public class BankBlock extends BlockContainer {
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		// TODO Auto-generated method stub
-		return new TileEntityBankBlock();
+		return new TileEntityTinyChestBlock();
 	}
 	
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state) {
-		return EnumBlockRenderType.ENTITYBLOCK_ANIMATED;
+		return EnumBlockRenderType.MODEL;
 	}
 	
 	@Override

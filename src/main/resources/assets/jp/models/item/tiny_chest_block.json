@@ -2,6 +2,6 @@
 	"parent": "item/generated",
 	"textures":
 	{
-		"layer0": "jp:items/bank_block"
+		"layer0": "jp:items/tiny_chest_block"
 	}
 }

@@ -1,6 +1,6 @@
 package com.tuxedosteve.JP3.blocks.container;
 
-import com.tuxedosteve.JP3.blocks.tileentity.TileEntityBankBlock;
+import com.tuxedosteve.JP3.blocks.tileentity.TileEntityTinyChestBlock;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -8,12 +8,12 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class ContainerBankBlock extends Container {
+public class ContainerTinyChestBlock extends Container {
 	
 	private final int numRows;
-	private final TileEntityBankBlock chestInventory;
+	private final TileEntityTinyChestBlock chestInventory;
 	
-	public ContainerBankBlock(InventoryPlayer playerInv, TileEntityBankBlock chestInventory, EntityPlayer player) {
+	public ContainerTinyChestBlock(InventoryPlayer playerInv, TileEntityTinyChestBlock chestInventory, EntityPlayer player) {
 		
 		this.chestInventory= chestInventory;
 		this.numRows= chestInventory.getSizeInventory();
@@ -87,7 +87,7 @@ public class ContainerBankBlock extends Container {
         return itemstack;
     }
 	
-	public TileEntityBankBlock getChestInventory() {
+	public TileEntityTinyChestBlock getChestInventory() {
 		return this.chestInventory;
 	}
 	

@@ -2,8 +2,8 @@ package com.tuxedosteve.JP3.blocks.gui;
 
 import java.awt.Color;
 
-import com.tuxedosteve.JP3.blocks.container.ContainerBankBlock;
-import com.tuxedosteve.JP3.blocks.tileentity.TileEntityBankBlock;
+import com.tuxedosteve.JP3.blocks.container.ContainerTinyChestBlock;
+import com.tuxedosteve.JP3.blocks.tileentity.TileEntityTinyChestBlock;
 import com.tuxedosteve.JP3.util.Reference;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -13,15 +13,15 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 
-public class GuiBankBlock extends GuiContainer {
+public class GuiTinyChestBlock extends GuiContainer {
 	
 	
 	private static final ResourceLocation GUI_CHEST= new ResourceLocation(Reference.MOD_ID+":textures/gui/bank_block.png");
 	private final InventoryPlayer playerInventory;
-	private final TileEntityBankBlock te;
+	private final TileEntityTinyChestBlock te;
 	
-	public GuiBankBlock(InventoryPlayer playerInventory, TileEntityBankBlock chestInventory, EntityPlayer player) {
-		super(new ContainerBankBlock(playerInventory, chestInventory, player));
+	public GuiTinyChestBlock(InventoryPlayer playerInventory, TileEntityTinyChestBlock chestInventory, EntityPlayer player) {
+		super(new ContainerTinyChestBlock(playerInventory, chestInventory, player));
 		this.playerInventory= playerInventory;
 		this.te= chestInventory;
 		

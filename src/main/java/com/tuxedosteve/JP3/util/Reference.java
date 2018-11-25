@@ -9,6 +9,6 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "com.tuxedosteve.JP3.proxy.ClientProxy";
 	public static final String COMMON_PROXY_CLASS = "com.tuxedosteve.JP3.proxy.CommonProxy";
 	
-	public static final int GUI_BANK_BLOCK= 2;
+	public static final int GUI_TINYCHEST_BLOCK= 2;
 
 }

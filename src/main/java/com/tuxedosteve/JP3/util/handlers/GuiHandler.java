@@ -1,8 +1,8 @@
 package com.tuxedosteve.JP3.util.handlers;
 
-import com.tuxedosteve.JP3.blocks.container.ContainerBankBlock;
-import com.tuxedosteve.JP3.blocks.gui.GuiBankBlock;
-import com.tuxedosteve.JP3.blocks.tileentity.TileEntityBankBlock;
+import com.tuxedosteve.JP3.blocks.container.ContainerTinyChestBlock;
+import com.tuxedosteve.JP3.blocks.gui.GuiTinyChestBlock;
+import com.tuxedosteve.JP3.blocks.tileentity.TileEntityTinyChestBlock;
 import com.tuxedosteve.JP3.util.Reference;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,7 +15,7 @@ public class GuiHandler implements IGuiHandler {
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		
-		if(ID== Reference.GUI_BANK_BLOCK) return new ContainerBankBlock(player.inventory, (TileEntityBankBlock)world.getTileEntity(new BlockPos(x,y,z)), player);
+		if(ID== Reference.GUI_TINYCHEST_BLOCK) return new ContainerTinyChestBlock(player.inventory, (TileEntityTinyChestBlock)world.getTileEntity(new BlockPos(x,y,z)), player);
 	
 		return null;
 	}
@@ -23,7 +23,7 @@ public class GuiHandler implements IGuiHandler {
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		
-		if(ID== Reference.GUI_BANK_BLOCK) return new GuiBankBlock(player.inventory, (TileEntityBankBlock)world.getTileEntity(new BlockPos(x,y,z)), player);
+		if(ID== Reference.GUI_TINYCHEST_BLOCK) return new GuiTinyChestBlock(player.inventory, (TileEntityTinyChestBlock)world.getTileEntity(new BlockPos(x,y,z)), player);
 		
 		return null;
 	}

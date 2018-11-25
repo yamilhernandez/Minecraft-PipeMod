@@ -1,6 +1,6 @@
 package com.tuxedosteve.JP3.blocks.container;
 
-import com.tuxedosteve.JP3.blocks.tileentity.TileEntityBankBlock;
+import com.tuxedosteve.JP3.blocks.tileentity.TileEntityTinyChestBlock;
 import com.tuxedosteve.JP3.blocks.tileentity.TileEntityPipeBlock;
 
 import net.minecraft.entity.player.EntityPlayer;

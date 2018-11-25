@@ -1,6 +1,6 @@
 package com.tuxedosteve.JP3.blocks.animation;
 
-import com.tuxedosteve.JP3.blocks.tileentity.TileEntityBankBlock;
+import com.tuxedosteve.JP3.blocks.tileentity.TileEntityTinyChestBlock;
 import com.tuxedosteve.JP3.util.Reference;
 
 import net.minecraft.client.renderer.GlStateManager;
@@ -10,13 +10,13 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderBank extends TileEntitySpecialRenderer<TileEntityBankBlock> {
+public class RenderBank extends TileEntitySpecialRenderer<TileEntityTinyChestBlock> {
 	
 	private static final ResourceLocation TEXTURE = new ResourceLocation(Reference.MOD_ID+":textures/blocks/bank_block.png");
 	private final ModelBank MODEL = new ModelBank();
 	
 	@Override
-    public void render(TileEntityBankBlock te, double x, double y, double z, float partialTicks, int destroyStage, float alpha)
+    public void render(TileEntityTinyChestBlock te, double x, double y, double z, float partialTicks, int destroyStage, float alpha)
     {
         GlStateManager.enableDepth();
         GlStateManager.depthFunc(515);

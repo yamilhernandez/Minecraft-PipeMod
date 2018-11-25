@@ -8,7 +8,7 @@ item.financial_handbook.name=Financial Handbook
 tile.safe_block.name=Safe
 tile.money_ore.name=Money Ore
 tile.bitcoin_ore.name=Bitcoin Ore
-tile.bank_block.name=Bank
+tile.tiny_chest_block.name=Tiny Chest
 tile.pipe_block.name=Pipe
 
 //Tools
@@ -28,5 +28,5 @@ item.money_leggings.name=Money Leggings
 item.money_boots.name=Money Boots
 
 //Container
-container.bank_block= Bank
+container.tiny_chest_block= Tiny Chest
 container.pipe_block= Pipe
