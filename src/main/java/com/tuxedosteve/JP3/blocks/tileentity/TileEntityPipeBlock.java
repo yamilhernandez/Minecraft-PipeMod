@@ -299,6 +299,8 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 				chest.setInventorySlotContents(0, this.getStackInSlot(0));
 			
 				this.removeStackFromSlot(0);
+				
+				return;
 			}
 		}
 	}
