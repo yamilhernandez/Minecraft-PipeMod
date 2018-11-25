@@ -185,15 +185,128 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 			
 		}
 	}
-
-
-
 	
-
 	@Override
 	public void update() {
-		this.nearMe();
+		//this.nearMe();
+		//this.transportItems();
 	}
+	
+	public EnumFacing findNextPipe(EnumFacing pastDirection) {
+		BlockPos pipePos = this.getPos();
+		
+		for (EnumFacing direction : EnumFacing.HORIZONTALS){ 
+		
+			BlockPos neighbourPos = pipePos.offset(direction); 
+			
+			IBlockState neighbourState = world.getBlockState(neighbourPos); 
+			
+			Block neighbourBlock = neighbourState.getBlock(); 
+			
+			if(neighbourBlock == ModBlocks.PIPE_BLOCK && direction!= pastDirection ) {
+				return direction;
+			}
+		}
+		return null;
+	}
+	
+	public EnumFacing findChest() {
+		BlockPos pipePos = this.getPos();
+		
+		for (EnumFacing direction : EnumFacing.HORIZONTALS){ 
+		
+			BlockPos neighbourPos = pipePos.offset(direction); 
+			
+			IBlockState neighbourState = world.getBlockState(neighbourPos); 
+			
+			Block neighbourBlock = neighbourState.getBlock(); 
+			
+			TileEntity te = world.getTileEntity(neighbourPos);
+			
+			if(te instanceof TileEntityLockableLoot &&  neighbourBlock != ModBlocks.PIPE_BLOCK) {
+				return direction;
+			}
+		}
+		return null;
+	}
+	
+	
+	public void transportItems() {
+		BlockPos pipePos = this.getPos();
+		
+		EnumFacing direction= findChest();
+			
+		BlockPos neighbourPos = pipePos.offset(direction); 
+			
+		//IBlockState neighbourState = world.getBlockState(neighbourPos); 
+			
+		//Block neighbourBlock = neighbourState.getBlock(); 
+			
+		TileEntity te = world.getTileEntity(neighbourPos);
+			
+		TileEntityLockableLoot chest = (TileEntityLockableLoot)te;
+		
+		if(this.isPull() && !chest.isEmpty() && this.isEmpty() ) {
+			
+			this.setInventorySlotContents(0, chest.getStackInSlot(0));
+			
+			chest.removeStackFromSlot(0);
+		
+			if(findChest() == EnumFacing.EAST) transportHelper(EnumFacing.EAST);
+			
+			if(findChest() == EnumFacing.WEST) transportHelper(EnumFacing.WEST);
+			
+			if(findChest() == EnumFacing.NORTH) transportHelper(EnumFacing.NORTH);
+			
+			if(findChest() == EnumFacing.SOUTH) transportHelper(EnumFacing.SOUTH);
+		}
+	}
+	
+	public void transportHelper(EnumFacing dontSeeDirection) {
+		BlockPos pipePos = this.getPos();
+		
+		if(this.isTransport() || this.isPull()) {
+			
+			EnumFacing newDirection =findNextPipe(dontSeeDirection);
+			
+			BlockPos neighbourPos = pipePos.offset(newDirection); 
+			
+			TileEntity te = world.getTileEntity(neighbourPos);
+			
+			TileEntityLockableLoot pipe = (TileEntityPipeBlock)te;
+			
+			if(pipe.isEmpty() && !this.isEmpty()) {
+			
+				this.setInventorySlotContents(0, pipe.getStackInSlot(0));
+			
+				pipe.removeStackFromSlot(0);
+			
+				transportHelper(newDirection);
+			}
+		}
+		if(this.isPush()) {
+			
+			EnumFacing direction= findChest();
+			
+			BlockPos neighbourPos = pipePos.offset(direction);  
+				
+			TileEntity te = world.getTileEntity(neighbourPos);
+				
+			TileEntityLockableLoot chest = (TileEntityLockableLoot)te;
+			
+			if (!this.isEmpty() && chest.isEmpty()) {
+			
+				chest.setInventorySlotContents(0, this.getStackInSlot(0));
+			
+				this.removeStackFromSlot(0);
+			}
+		}
+	}
+	
+	
+	
+	
+	
 
 //	public void nearMe(EnumFacing[] unChecked) {
 //		if(unChecked.length>2) {
@@ -255,7 +368,6 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 
 
 //	private EnumFacing[] removeDirection(EnumFacing direction, EnumFacing[] unChecked ) {
-//		// TODO Auto-generated method stub
 //		EnumFacing[] recur = new EnumFacing[unChecked.length-1];
 //		int j=0;
 //		for (int i = 0; i < unChecked.length; i++) {
