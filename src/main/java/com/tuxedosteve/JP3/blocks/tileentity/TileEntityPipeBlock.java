@@ -182,6 +182,7 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 //				chest.setInventorySlotContents(0, this.getStackInSlot(0));
 //				this.removeStackFromSlot(0);
 //			}
+			
 		}
 	}
 
@@ -194,7 +195,75 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 		this.nearMe();
 	}
 
+//	public void nearMe(EnumFacing[] unChecked) {
+//		if(unChecked.length>2) {
+//			BlockPos mainPos = this.getPos();
+//			for (EnumFacing direction : unChecked){ 
+//
+//				BlockPos neighbourPos = mainPos.offset(direction); 
+//
+//				IBlockState neighbourState = world.getBlockState(neighbourPos); 
+//
+//				Block neighbourBlock = neighbourState.getBlock(); 
+//
+//				TileEntity te = world.getTileEntity(neighbourPos);
+//				TileEntityLockableLoot chest = (TileEntityLockableLoot)te;
+//				//TileEntityPipeBlock pb= (TileEntityPipeBlock)te;
+//
+//				// Del Chest al Pipe(pull)
+//				if (neighbourBlock == ModBlocks.BANK_BLOCK && this.isPull() && !chest.isEmpty()){ 
+//					this.setInventorySlotContents(0, chest.getStackInSlot(0));
+//					chest.removeStackFromSlot(0);
+//				}	
+//				//Del Pipe(push) al chest	
+//
+//				if(neighbourBlock == ModBlocks.BANK_BLOCK && this.isPush() && !this.isEmpty()) {
+//					chest.setInventorySlotContents(0, this.getStackInSlot(0));
+//					this.removeStackFromSlot(0);
+//				}	
+//				// Del pipe(push) a transport(pipe)
+//
+//				if(neighbourBlock == ModBlocks.PIPE_BLOCK && this.isPush() && !chest.isEmpty()) {
+//					this.setInventorySlotContents(0, chest.getStackInSlot(0));
+//					chest.removeStackFromSlot(0);
+//					this.nearMe(removeDirection(direction, unChecked));
+//				}
+//
+//				//Del pipe (pull) a pipe(transport)	
+//
+//				if(neighbourBlock == ModBlocks.PIPE_BLOCK && this.isPull() && !this.isEmpty()) {
+//					chest.setInventorySlotContents(0, this.getStackInSlot(0));
+//					this.removeStackFromSlot(0);
+//					this.nearMe(removeDirection(direction, unChecked));
+//				}
 
+				//Del pipe(transport) a pipe(cualquiera)
+//				if(neighbourBlock == ModBlocks.PIPE_BLOCK && this.isTransport() && !chest.isEmpty()){
+//					this.setInventorySlotContents(0, chest.getStackInSlot(0));
+//					chest.removeStackFromSlot(0);
+//					this.nearMe(removeDirection(direction, unChecked));
+//				}
+				
+//			}
+//
+//		}
+//	}
+//
+
+
+
+
+
+//	private EnumFacing[] removeDirection(EnumFacing direction, EnumFacing[] unChecked ) {
+//		// TODO Auto-generated method stub
+//		EnumFacing[] recur = new EnumFacing[unChecked.length-1];
+//		int j=0;
+//		for (int i = 0; i < unChecked.length; i++) {
+//			if(direction!=unChecked[i])
+//				recur[j++]=unChecked[i];
+//		}
+//		return recur;
+//	}
 
 
 }
