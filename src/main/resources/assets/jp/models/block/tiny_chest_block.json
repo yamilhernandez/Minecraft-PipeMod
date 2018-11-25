@@ -1,9 +1,9 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "textures": {
-        "0": "blocks/tinychest_front",
-        "1": "blocks/tinychest_side",
-        "2": "blocks/tinychest_top"
+        "0": "jp:blocks/tinychest_front",
+        "1": "jp:blocks/tinychest_side",
+        "2": "jp:blocks/tinychest_top"
     },
     "elements": [
         {

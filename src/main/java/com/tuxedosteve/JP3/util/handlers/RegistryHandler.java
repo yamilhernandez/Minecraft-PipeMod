@@ -1,7 +1,6 @@
 package com.tuxedosteve.JP3.util.handlers;
 
 import com.tuxedosteve.JP3.Main;
-import com.tuxedosteve.JP3.blocks.animation.RenderBank;
 import com.tuxedosteve.JP3.blocks.tileentity.TileEntityTinyChestBlock;
 import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.init.ModItems;
@@ -30,12 +29,13 @@ public class RegistryHandler {
 
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 		TileEntityHandler.registerTileEntities();
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTinyChestBlock.class, new RenderBank());
+		
 	}
 
 	@SubscribeEvent
 	public static void OnModelRegister(ModelRegistryEvent event) {
-		Main.proxy.registerItemRenderer(Item.getItemFromBlock(ModBlocks.TINYCHEST_BLOCK), 0, "bank_block");
+		Main.proxy.registerItemRenderer(Item.getItemFromBlock(ModBlocks.TINYCHEST_BLOCK), 0, "tiny_chest_block");
+		Main.proxy.registerItemRenderer(Item.getItemFromBlock(ModBlocks.PIPE_BLOCK), 0, "pipe_block");
 
 		for (Item item : ModItems.ITEMS) {
 

@@ -31,7 +31,7 @@ public class GuiTinyChestBlock extends GuiContainer {
 	
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-		this.fontRenderer.drawString("Bank", 8, 110, 000000);
+		this.fontRenderer.drawString("Tiny Chest", 8, 110, 000000);
 		this.fontRenderer.drawString(this.playerInventory.getDisplayName().getUnformattedComponentText(), 6, this.ySize-92, 000000);
 		
 	}

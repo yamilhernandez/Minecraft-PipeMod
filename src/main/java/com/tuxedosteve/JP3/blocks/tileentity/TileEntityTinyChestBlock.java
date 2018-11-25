@@ -1,38 +1,23 @@
 package com.tuxedosteve.JP3.blocks.tileentity;
 
 import com.tuxedosteve.JP3.blocks.container.ContainerTinyChestBlock;
-import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.util.Reference;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.tileentity.TileEntityLockableLoot;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public class TileEntityTinyChestBlock extends TileEntityLockableLoot implements ITickable {
 
 	private NonNullList<ItemStack> chestContents= NonNullList.<ItemStack>withSize(1,ItemStack.EMPTY);
 	public int numPlayersUsing, ticksSinceSync;
-	public float lidAngle, prevLidAngle;
+	//public float lidAngle, prevLidAngle;
 
 
 
@@ -58,7 +43,7 @@ public class TileEntityTinyChestBlock extends TileEntityLockableLoot implements 
 	@Override
 	public String getName() {
 
-		return this.hasCustomName() ? this.customName: "container.bank_block";
+		return this.hasCustomName() ? this.customName: "container.tiny_chest_block";
 
 	}
 
@@ -92,7 +77,7 @@ public class TileEntityTinyChestBlock extends TileEntityLockableLoot implements 
 
 	@Override
 	public String getGuiID() {
-		return Reference.MOD_ID+ ":tinychest_block";
+		return Reference.MOD_ID+ ":tiny_chest_block";
 	}
 
 	@Override

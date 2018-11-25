@@ -39,11 +39,7 @@ public class PipeBlock extends BlockContainer {
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
 			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 			TileEntityPipeBlock tileentity= (TileEntityPipeBlock)worldIn.getTileEntity(pos);
-			tileentity.setMode();
-			
-//		if(!worldIn.isRemote) 
-//			playerIn.openGui(Main.Instance, Reference.GUI_BANK_BLOCK, worldIn, pos.getX(), pos.getY(), pos.getZ());
-//		
+			tileentity.setMode();	
 		return true;
 	}
 	
@@ -74,10 +70,6 @@ public class PipeBlock extends BlockContainer {
 		return new TileEntityPipeBlock();
 	}
 	
-	@Override
-	public boolean hasTileEntity() {
-		return true;
-	}
 	
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state) {

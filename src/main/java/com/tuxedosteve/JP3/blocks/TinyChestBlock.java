@@ -97,6 +97,15 @@ public class TinyChestBlock extends BlockContainer {
 		return false;
 	}
 	
+	@Override
+	public boolean isBlockNormalCube(IBlockState state) {
+		
+		return false;
+	}
+	
+	
+	
+	
 	
 
 }

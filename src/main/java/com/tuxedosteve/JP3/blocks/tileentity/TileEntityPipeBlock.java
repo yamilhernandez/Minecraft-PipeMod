@@ -1,6 +1,5 @@
 package com.tuxedosteve.JP3.blocks.tileentity;
 
-import com.tuxedosteve.JP3.blocks.container.ContainerTinyChestBlock;
 import com.tuxedosteve.JP3.blocks.container.ContainerPipeBlock;
 import com.tuxedosteve.JP3.init.ModBlocks;
 import com.tuxedosteve.JP3.util.Reference;
@@ -10,13 +9,11 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.tileentity.TileEntityLockableLoot;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;

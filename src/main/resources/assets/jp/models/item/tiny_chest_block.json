@@ -1,7 +1,3 @@
 {
-	"parent": "item/generated",
-	"textures":
-	{
-		"layer0": "jp:items/tiny_chest_block"
-	}
+   "parent": "jp:block/tiny_chest_block"
 }
