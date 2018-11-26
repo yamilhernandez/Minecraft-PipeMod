@@ -1,5 +1,10 @@
 package com.tuxedosteve.JP3.blocks;
 
+
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import com.tuxedosteve.JP3.Main;
 import com.tuxedosteve.JP3.blocks.tileentity.TileEntityTinyChestBlock;
 import com.tuxedosteve.JP3.blocks.tileentity.TileEntityPipeBlock;
@@ -10,6 +15,7 @@ import com.tuxedosteve.JP3.util.Reference;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -87,7 +93,14 @@ public class PipeBlock extends BlockContainer {
 		
 		return false;
 	}
-	
+	@Override
+	public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced)
+    {
+		tooltip.add("This Pipe Block transports items from one chest to another.");
+		tooltip.add("To do so, connect the front of the 'sender' chest to the back of the 'receiver' chest.");
+		tooltip.add("Set first pipe to pull, last pipe to push, and all other pipes to transport.");
+		tooltip.add("To change states, right click on pipes.");
+    }
 	
 	
 }
