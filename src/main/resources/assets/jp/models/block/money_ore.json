@@ -1,12 +1,12 @@
 {
    "parent": "block/cube",
    "textures": {
-       "particle": "jp:blocks/safe_block_front",
-        "down": "jp:blocks/safe_block_sides",
-        "up": "jp:blocks/safe_block_sides",
-        "north": "jp:blocks/safe_block_front",
-        "east": "jp:blocks/safe_block_sides",
-        "south": "jp:blocks/safe_block_sides",
-        "west": "jp:blocks/safe_block_sides"
+       "particle": "jp:blocks/money_ore",
+        "down": "jp:blocks/money_ore",
+        "up": "jp:blocks/money_ore",
+        "north": "jp:blocks/money_ore",
+        "east": "jp:blocks/money_ore",
+        "south": "jp:blocks/money_ore",
+        "west": "jp:blocks/money_ore"
    }
 }

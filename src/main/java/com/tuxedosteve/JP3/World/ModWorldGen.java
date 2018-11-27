@@ -5,6 +5,7 @@ import java.util.Random;
 import com.tuxedosteve.JP3.init.ModBlocks;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -28,9 +29,9 @@ public class ModWorldGen implements IWorldGenerator{
 			IChunkProvider chunkProvider) {
 		
 		generateOre(ModBlocks.MONEY_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ*16,
-				50, 70, 1, 18);
+				50, 70, 1, 70);
 		generateOre(ModBlocks.BITCOIN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ*16,
-				50, 70, 1, 18);
+				50, 70, 1, 70);
 		
 	}
 	
