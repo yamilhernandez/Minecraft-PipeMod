@@ -19,17 +19,17 @@ public class BitcoinOre extends BlockBase{
 		setHarvestLevel("pickaxe", 2);
 	}
 	
-//	@Override
-//	public Item getItemDropped(IBlockState state, Random rand, int fortune ) {
-//		return ModItems.BITCOIN;
-//		
-//	}
+	@Override
+	public Item getItemDropped(IBlockState state, Random rand, int fortune ) {
+		return ModItems.BITCOIN;
+		
+	}
 	
-//	@Override
-//	public int quantityDropped(Random rand) {
-//		int max = 100;
-//		int min = 1;
-//		return rand.nextInt(max) + min;
-//	}
+	@Override
+	public int quantityDropped(Random rand) {
+		int max = 100;
+		int min = 1;
+		return rand.nextInt(max) + min;
+	}
 
 }

@@ -29,9 +29,9 @@ public class ModWorldGen implements IWorldGenerator{
 			IChunkProvider chunkProvider) {
 		
 		generateOre(ModBlocks.MONEY_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ*16,
-				50, 70, 1, 70);
+				16, 64, random.nextInt(7)+4, 30);
 		generateOre(ModBlocks.BITCOIN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ*16,
-				50, 70, 1, 70);
+				16, 64, random.nextInt(7)+4, 30);
 		
 	}
 	
