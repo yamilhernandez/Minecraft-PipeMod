@@ -15,6 +15,7 @@ import com.tuxedosteve.JP3.util.Reference;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -46,6 +47,8 @@ public class PipeBlock extends BlockContainer {
 			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 			TileEntityPipeBlock tileentity= (TileEntityPipeBlock)worldIn.getTileEntity(pos);
 			tileentity.setMode();	
+			//rotateBlock(worldIn,pos,EnumFacing.NORTH);
+		
 		return true;
 	}
 	
