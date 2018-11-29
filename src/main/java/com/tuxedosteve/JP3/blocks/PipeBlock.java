@@ -96,10 +96,11 @@ public class PipeBlock extends BlockContainer {
 	@Override
 	public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced)
     {
-		tooltip.add("This Pipe Block transports items from one chest to another.");
-		tooltip.add("To do so, connect the front of the 'sender' chest to the back of the 'receiver' chest.");
-		tooltip.add("Set first pipe to pull, last pipe to push, and all other pipes to transport.");
-		tooltip.add("To change states, right click on pipes.");
+		tooltip.add("This Pipe Block transports items from one container to another.");
+		tooltip.add("§a You must set the pipe to the direction you want it to move the item.");
+		tooltip.add("§9 First pipe will check for containers in the opposite direction to the one chosen.");
+		tooltip.add("§4 To toggle direction, right click on pipe.");
+		
     }
 	
 	
