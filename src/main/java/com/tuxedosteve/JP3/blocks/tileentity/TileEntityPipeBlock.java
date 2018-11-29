@@ -29,8 +29,8 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 
 
 	private NonNullList<ItemStack> chestContents= NonNullList.<ItemStack>withSize(1,ItemStack.EMPTY);
-	public int numPlayersUsing, ticksSinceSync;
-	public EnumFacing pointer=EnumFacing.SOUTH;
+	public int numPlayersUsing, ticksSinceSync, index=2;
+	public EnumFacing pointer=EnumFacing.NORTH;
 
 
 	@Override
@@ -97,24 +97,24 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 	}
 
 	public void setMode() { 
-		if(pointer==EnumFacing.SOUTH) {
-			pointer=EnumFacing.WEST;
-			Minecraft.getMinecraft().player.sendChatMessage("WEST");
-		}else if(pointer==EnumFacing.WEST) {
-			pointer=EnumFacing.NORTH;
-			Minecraft.getMinecraft().player.sendChatMessage("NORTH");
-		}else if(pointer==EnumFacing.NORTH) {
-			pointer=EnumFacing.EAST;
-			Minecraft.getMinecraft().player.sendChatMessage("EAST");
-		}else if(pointer==EnumFacing.EAST) {
-			pointer=EnumFacing.SOUTH;
-			Minecraft.getMinecraft().player.sendChatMessage("SOUTH");
+		setModeHelper(index++);
+	}
+		
+
+	private void setModeHelper(int index2) {
+		if(index>=4) {
+			index=0;
+			this.setModeHelper(index);
 		}
+		else {
+			pointer=EnumFacing.HORIZONTALS[index];
+			Minecraft.getMinecraft().player.sendChatMessage(pointer+"");
+		}
+		
 	}
 
 	public void transportItem() {
 		BlockPos mainPos = this.getPos();
-		
 		//Busca el bloque en la direccion opuesta 
 		BlockPos backNeighbourPos = mainPos.offset(pointer.getOpposite()); 
 		IBlockState backNeighbourState = world.getBlockState(backNeighbourPos); 
@@ -139,7 +139,7 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 			IInventory chest = (IInventory)te;
 			chest.setInventorySlotContents(0, this.getStackInSlot(0));
 			this.removeStackFromSlot(0);
-		}	
+		}
 	}
 
 	@Override
@@ -147,4 +147,7 @@ public class TileEntityPipeBlock extends TileEntityLockableLoot implements ITick
 		this.transportItem();
 	}
 
+
 }
+
+

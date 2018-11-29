@@ -102,6 +102,7 @@ public class PipeBlock extends BlockContainer {
 		tooltip.add("This Pipe Block transports items from one container to another.");
 		tooltip.add("§a You must set the pipe to the direction you want it to move the item.");
 		tooltip.add("§9 First pipe will check for containers in the opposite direction to the one chosen.");
+		tooltip.add("§4 Arrow on pipe is pointing North.");
 		tooltip.add("§4 To toggle direction, right click on pipe.");
 		
     }
