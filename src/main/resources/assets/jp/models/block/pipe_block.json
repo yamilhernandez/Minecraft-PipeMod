@@ -2,8 +2,11 @@
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "textures": {
         "0": "blocks/diamond_block",
-        "1": "jp:blocks/diamond_block_arrow",
-        "2": "blocks/iron_block"
+        "1": "jp:blocks/diamond_block_n",
+        "2": "blocks/iron_block",
+        "3": "jp:blocks/diamond_block_s",
+        "4": "jp:blocks/diamond_block_w",
+        "5": "jp:blocks/diamond_block_e"
     },
     "elements": [
         {
@@ -29,7 +32,7 @@
                 "south": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
                 "west": { "texture": "#-1", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
                 "up": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-                "down": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
+                "down": { "texture": "#-1", "uv": [ 0.0, 0.0, 8.0, 2.0 ] }
             }
         },
         {
@@ -54,7 +57,7 @@
                 "east": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
                 "south": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
                 "west": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-                "up": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "up": { "texture": "#3", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 180 },
                 "down": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
             }
         },
@@ -66,8 +69,8 @@
                 "north": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
                 "east": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
                 "south": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-                "west": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-                "up": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "west": { "texture": "#0", "uv": [ 0.0, 0.0, 0.0, 15.0 ] },
+                "up": { "texture": "#4", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 270 },
                 "down": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
             }
         },
@@ -80,7 +83,7 @@
                 "east": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
                 "south": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
                 "west": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-                "up": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "up": { "texture": "#5", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 90 },
                 "down": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
             }
         },
