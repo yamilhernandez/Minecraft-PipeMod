@@ -10,16 +10,12 @@ import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntityLockableLoot;
-import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 
-public class TileEntityTinyChestBlock extends TileEntityLockableLoot implements ITickable {
+public class TileEntityTinyChestBlock extends TileEntityLockableLoot{
 
 	private NonNullList<ItemStack> chestContents= NonNullList.<ItemStack>withSize(1,ItemStack.EMPTY);
 	public int numPlayersUsing, ticksSinceSync;
-	//public float lidAngle, prevLidAngle;
-
-
 
 	@Override
 	public int getSizeInventory() {
@@ -81,13 +77,6 @@ public class TileEntityTinyChestBlock extends TileEntityLockableLoot implements 
 	}
 
 	@Override
-	public void update()
-	{
-		//this.nearMe();
-    
-	}
-
-	@Override
 	protected NonNullList<ItemStack> getItems() {
 
 		return this.chestContents;
@@ -109,27 +98,4 @@ public class TileEntityTinyChestBlock extends TileEntityLockableLoot implements 
 		this.world.addBlockEvent(pos, this.getBlockType(), 1, this.numPlayersUsing);
 		this.world.notifyNeighborsOfStateChange(pos, this.blockType, false);
 	}
-
-
-//		public void nearMe() {
-//			BlockPos mainPos = this.getPos();
-//			for (EnumFacing direction : EnumFacing.VALUES){ 
-//	
-//				BlockPos neighbourPos = mainPos.offset(direction); 
-//	
-//				IBlockState neighbourState = world.getBlockState(neighbourPos); 
-//	
-//				Block neighbourBlock = neighbourState.getBlock(); 
-//	
-//				if (neighbourBlock == Blocks.CHEST){ 
-//					TileEntity te = world.getTileEntity(neighbourPos);
-//				    TileEntityChest chest = (TileEntityChest)te ;
-//					this.setInventorySlotContents(0, chest.getStackInSlot(0));
-//				}
-//				
-//			}
-//		}
-
-
-
 }

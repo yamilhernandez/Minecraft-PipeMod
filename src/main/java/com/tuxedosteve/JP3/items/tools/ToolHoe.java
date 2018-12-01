@@ -1,12 +1,19 @@
 package com.tuxedosteve.JP3.items.tools;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import com.tuxedosteve.JP3.Main;
 import com.tuxedosteve.JP3.init.ModItems;
 import com.tuxedosteve.JP3.util.IHasModel;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ToolHoe extends ItemHoe implements IHasModel {
 	
@@ -25,5 +32,10 @@ public class ToolHoe extends ItemHoe implements IHasModel {
 		Main.proxy.registerItemRenderer(this, 0, "inventory");
 
 	}
-
+	
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
+	{
+		tooltip.add("The name speaks for itself.");
+	}
 }

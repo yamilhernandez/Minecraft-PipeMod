@@ -17,9 +17,6 @@ public class ModBlocks {
 
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
-	//Materials
-	
-
 	// Blocks
 	public static final Block SAFE_BLOCK = new SafeBlock("safe_block", Material.IRON);
 	public static final Block MONEY_ORE = new MoneyOre("money_ore", Material.ROCK);

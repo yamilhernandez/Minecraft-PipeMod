@@ -1,6 +1,5 @@
 package com.tuxedosteve.JP3.init;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

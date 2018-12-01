@@ -4,7 +4,6 @@ import com.tuxedosteve.JP3.Main;
 import com.tuxedosteve.JP3.init.ModItems;
 import com.tuxedosteve.JP3.util.IHasModel;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 

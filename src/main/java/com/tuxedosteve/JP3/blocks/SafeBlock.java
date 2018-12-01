@@ -11,10 +11,6 @@ public class SafeBlock extends BlockBase {
 		setHardness(100.0F);
 		setResistance(6000.0F);
 		setHarvestLevel("pickaxe", 3);
-		// setLightLevel();
-		// setLightOpacity();
-		// SetBlockUnbreakable();
-
 	}
 	
 	
