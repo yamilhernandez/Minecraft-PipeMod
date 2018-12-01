@@ -29,9 +29,9 @@ public class ModItems {
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
 	//Materials
-	public static final ToolMaterial MATERIAL_MONEY = EnumHelper.addToolMaterial("material_money", 3, 250, 8.0F, 4.0F, 10);
+	public static final ToolMaterial MATERIAL_MONEY = EnumHelper.addToolMaterial("material_money", 3, 100, 7.0F, 4.0F, 10);
 	public static final ArmorMaterial ARMOR_MATERIAL_MONEY = EnumHelper.addArmorMaterial("armor_material_money", Reference.MOD_ID +":money",6, 
-			new int[] {1,2,3,1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+			new int[] {2,3,4,2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
 	
 	
 	//Items
